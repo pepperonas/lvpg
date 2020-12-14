@@ -23,7 +23,8 @@
                 <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
                 <div>{{ $user->profile->description }}
                 </div>
-                <div><a href="https://celox.io">{{ $user->profile->url ?? 'N/A' }}</a></div>
+                <div><a href="https://celox.io"
+                        target="_blank">{{ $user->profile->url ?? 'N/A' }}</a></div>
             </div>
         </div>
         <div class="row pt-5">
