@@ -1928,6 +1928,10 @@ __webpack_require__.r(__webpack_exports__);
     followUser: function followUser() {
       axios.post('/follow/' + this.userId).then(function (response) {
         console.log(response.data);
+      })["catch"](function (errors) {
+        if (errors.response.status === 401) {
+          window.location = '/login';
+        }
       });
     }
   },
